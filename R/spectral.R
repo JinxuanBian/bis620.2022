@@ -18,11 +18,11 @@
 spectral_signature <- function(x, take_log = FALSE, inverse = TRUE) {
 
   ret <- map_dfc(
-    x %>% select(X, Y, Z),
+    x |> select(X, Y, Z),
     ~ fft(.x, inverse = inverse) %>% Mod()
   )
   if (take_log) {
-    ret <- ret %>%
+    ret <- ret |>
       mutate_at(vars(X, Y, Z), log)
   }
   ret <- ret[seq_len(ceiling(nrow(ret) / 2)), ]
