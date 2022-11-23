@@ -18,7 +18,7 @@ ukb_accel |>
     xlab("Time") +
     ylab("Acceleration (in gravities)")
 
-ukb_accel %>%
+ukb_accel |>
   filter(time >= dt & time < dt + minutes(5)) |>
   spectral_signature(take_log = FALSE) |>
  # filter(freq <= 10) |>
