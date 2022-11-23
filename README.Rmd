@@ -1,10 +1,10 @@
 ---
-  output: github_document
+output: github_document
 ---
 
-  <!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-  ```{r, include = FALSE}
+```{r, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -16,15 +16,12 @@ knitr::opts_chunk$set(
 # bis620.2022
 
 <!-- badges: start -->
-  [![R-CMD-check](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/R-CMD-check.yaml)
 [![test-coverage-check](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/test-coverage.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/test-coverage.yaml)
-#[![Codecov](https://codecov.io/gh/JingnanBai/BIS620_hw3/branch/master/graph/badge.svg)](https://app.codecov.io/gh/JingnanBai/BIS620_hw3?branch=master)
 [![lint check](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/lint.yaml)](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/lint.yaml)
 <!-- badges: end -->
 
-  **demo package for Yale University - BIS620 - 22fall**
-
-  bis620.2022 is a package to plot the time-series data, with basic plot functions and spectral signature calculation as data process. It would be shown with UKBiobank accelerometry data.
+bis620.2022 is a package to plot the time-series data, with basic plot functions and spectral signature calculation as data process. It would be shown with UKBiobank accelerometry data.
 
 It could be used for data containing columns named `time` or `freq` and other numeric variable.
 
@@ -38,8 +35,7 @@ refer to the example data `ukb_accel` for more details.
 ## Installation
 
 You can install the development version of bis620.2022 from [GitHub](https://github.com/JinxuanBian/bis620.2022) with:
-
-  ``` r
+``` r
 # install.packages("devtools")
 devtools::install_github("JinxuanBian/bis620.2022")
 ```
@@ -48,7 +44,7 @@ devtools::install_github("JinxuanBian/bis620.2022")
 
 This is a basic example which shows you how to solve a common problem:
 
-  ```{r example}
+```{r example}
 library(bis620.2022)
 # call of UKBiobank accelerometry data
 data(ukb_accel)
