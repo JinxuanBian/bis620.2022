@@ -25,7 +25,7 @@ bis620.2022 is a package to plot the time-series data, with basic plot functions
 
 It could be used for data containing columns named `time` or `freq` and other numeric variable.
 
-refer to the example data `ukb_accel` for more details.
+Refer to the example data `ukb_accel` for more details.
 
 ### build situation overview:
 [test coverage page](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/test-coverage.yaml)
