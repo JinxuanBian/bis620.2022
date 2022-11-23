@@ -27,7 +27,7 @@ test_that(
 test_that(
   "The accel_plot() run successfully with freq w/o time.",
   {
-    data("ukb_accel")
+    data(ukb_accel)
     temp <- ukb_accel[1:100, ]
     colnames(tempdata) <- c("freq", "X", "Y", "Z")
     p <- accel_plot(temp)
