@@ -23,3 +23,14 @@ test_that(
     vdiffr::expect_doppelganger("first-100-samples", p)
   }
 )
+
+test_that(
+  "The accel_plot() run successfully with freq w/o time.",
+  {
+    data("ukb_accel")
+    temp <- ukb_accel[1:100, ]
+    colnames(tempdata) <- c("freq", "X", "Y", "Z")
+    p <- accel_plot(temp)
+    expect_true(inherits(p, "gg"))
+  }
+)
