@@ -5,10 +5,10 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/R-CMD-check.yaml)
-[![test-coverage-check](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/test-coverage.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/test-coverage.yaml)
-[![lint
-check](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/lint.yaml)](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/lint.yaml)
+[![Test
+coverage](https://github.com/JinxuanBian/bis620.2022/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/actions/workflows/test-coverage.yaml)
+[![lint](https://github.com/JinxuanBian/bis620.2022/actions/workflows/lint.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/actions/workflows/lint.yaml)
+[![R-CMD-check](https://github.com/JinxuanBian/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 bis620.2022 is a package to plot the time-series data, with basic plot
