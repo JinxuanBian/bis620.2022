@@ -43,6 +43,11 @@ devtools::install_github("JinxuanBian/bis620.2022")
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
+```{r load-packages, include=FALSE}
+library(dplyr)
+library(magrittr)
+library(knitr)
+```
 
 ```{r example}
 library(bis620.2022)
