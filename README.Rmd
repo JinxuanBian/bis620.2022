@@ -36,16 +36,10 @@ devtools::install_github("JinxuanBian/bis620.2022")
 ## Example
 
 This is a basic example which shows you how to solve a common problem:
-```{r load-packages, include=FALSE}
-library(dplyr)
-library(magrittr)
-library(knitr)
-```
-
 ```{r example}
 library(bis620.2022)
 # call of vital data
-data(ukb_accel)
+data(vital)
 # plots the histogram of the time at risk of four groups, taking breast cancer as an example
 vital_hist(vital, "brca")
 # plot the scatter plot of the time at risk versus bmi for four groups with the effect of smoking and model with linear regression with linear line and equation shown, taking breast cancer as an example
