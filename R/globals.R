@@ -1,1 +1,1 @@
-utils::globalVariables(c("X", "Y", "Z", "value", ".data"))
+utils::globalVariables(c("X", "Y", "Z", "value"))
