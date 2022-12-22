@@ -38,6 +38,7 @@ devtools::install_github("JinxuanBian/bis620.2022")
 This is a basic example which shows you how to solve a common problem:
 ```{r example}
 library(bis620.2022)
+library(dplyr)
 # call of vital data
 data(vital)
 # plots the histogram of the time at risk of four groups, taking breast cancer as an example

@@ -11,22 +11,13 @@ coverage](https://github.com/JinxuanBian/bis620.2022/actions/workflows/test-cove
 [![R-CMD-check](https://github.com/JinxuanBian/bis620.2022/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/JinxuanBian/bis620.2022/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-bis620.2022 is a package to plot the time-series data, with basic plot
-functions and spectral signature calculation as data process. It would
-be shown with UKBiobank accelerometry data.
+bis620.2022 is a package to examine how would the supplements of Vitamin
+D or Omega-3 affect the person-year of various types of cancers and
+cardiovascular, for which person-year is defined as the estimate of the
+actual time at risk. Additionally, how factors such as BMI and smoking
+would act in the given experimental trials are also considered.
 
-It could be used for data containing columns named `time` or `freq` and
-other numeric variable.
-
-refer to the example data `ukb_accel` for more details.
-
-### build situation overview:
-
-[test coverage
-page](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/test-coverage.yaml)
-
-[lint
-results](https://github.com/JinxuanBian/bis620.2022/blob/main/.github/workflows/lint.yaml)
+Refer to the example data `vital` for more details.
 
 ## Installation
 
@@ -44,20 +35,49 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(bis620.2022)
-# call of UKBiobank accelerometry data
-data(ukb_accel)
-# plots UKBiobank accelerometry data
-ukb_accel[1:1000, ] |> accel_plot()
+library(dplyr)
+#> 
+#> 载入程辑包：'dplyr'
+#> The following objects are masked from 'package:stats':
+#> 
+#>     filter, lag
+#> The following objects are masked from 'package:base':
+#> 
+#>     intersect, setdiff, setequal, union
+# call of vital data
+data(vital)
+# plots the histogram of the time at risk of four groups, taking breast cancer as an example
+vital_hist(vital, "brca")
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
 ``` r
-# calculate spectral signature by taking the modulus of the
-# Fourier coefficients of the signal
-ukb_accel[1:1000, ] |>
-  spectral_signature(take_log = FALSE) |>
-  accel_plot()
+# plot the scatter plot of the time at risk versus bmi for four groups with the effect of smoking and model with linear regression with linear line and equation shown, taking breast cancer as an example
+vital_model_smoke(vital, "brca")
+#> Warning: The dot-dot notation (`..rr.label..`) was deprecated in ggplot2 3.4.0.
+#> ℹ Please use `after_stat(rr.label)` instead.
+#> ℹ The deprecated feature was likely used in the bis620.2022 package.
+#>   Please report the issue to the authors.
+#> `geom_smooth()` using formula = 'y ~ x'
+#> Warning: Removed 960 rows containing non-finite values (`stat_smooth()`).
+#> Warning: Removed 960 rows containing non-finite values
+#> (`stat_regline_equation()`).
+#> Warning: Removed 960 rows containing non-finite values (`stat_cor()`).
+#> Warning: Removed 960 rows containing missing values (`geom_point()`).
 ```
 
 <img src="man/figures/README-example-2.png" width="100%" />
+
+``` r
+# this is for without effect of smoking
+vital_model_nosmoke(vital, "brca")
+#> `geom_smooth()` using formula = 'y ~ x'
+#> Warning: Removed 11956 rows containing non-finite values (`stat_smooth()`).
+#> Warning: Removed 11956 rows containing non-finite values
+#> (`stat_regline_equation()`).
+#> Warning: Removed 11956 rows containing non-finite values (`stat_cor()`).
+#> Warning: Removed 11956 rows containing missing values (`geom_point()`).
+```
+
+<img src="man/figures/README-example-3.png" width="100%" />

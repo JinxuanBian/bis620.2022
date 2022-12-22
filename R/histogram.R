@@ -1,12 +1,14 @@
 #' Plot VITAL Data
-#' This function plots Vital data of a disease by groups.
+#'
+#' This function plots Vital data of a disease by groups
+#' .
 #' @param v a data frame
 #' @param x a particular disease in vital data frame
 #' @return a histogram of person years of a particular disease faceted by four groups.
 #' @importFrom dplyr select filter group_by vdiffr
 #' @importFrom ggplot2 aes ggplot geom_histogram facet_grid
 #' @examples
-#' data(vital)
+#' vital_hist(vital, "brca")
 #' @export
 
 '%!in%' <- function(x,y)!('%in%'(x,y))
